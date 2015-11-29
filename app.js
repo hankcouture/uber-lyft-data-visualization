@@ -1,30 +1,20 @@
-// Grab data from data.js file
-var data = data.rideData.data;
-var length = 0;
-
-// Show a hidden d3 element.
+// Show a hidden d3 element
 d3.selection.prototype.show = function() {
   this.style('display', 'initial');
   return this;
 }
 
-// Hide a d3 element.
+// Hide a d3 element
 d3.selection.prototype.hide = function() {
   this.style('display', 'none');
   return this;
 }
 
-function intro(d) {
-  d.hide()
-  var original = d.attr('y');
-  d.attr('y', h)
-  var t = 150;
-  d.transition()
-     .delay(t)
-     .duration(t * (count / 2))
-     .attr('y', original)
-  d.show();
-}
+
+
+// Grab data from data.js file
+var data = data.rideData.data;
+var length = 0;
 
 // Set our margins
 var margin = {
@@ -111,25 +101,49 @@ var month = svg.selectAll(".Date")
     return "translate(" + x(d.Date) + ",0)";
 });
 
-month.selectAll("rect")
-    .data(function (d) {
-    return d.types;
-})
-    .enter().append("rect")
-    .attr("class", "bar")
-    .attr("width", function(d) {
-     return x.rangeBand();   
+function makeBars() {
+    return month.selectAll("rect")
+        .data(function (d) {
+        return d.types;
     })
-    .attr("y", function (d) {
-    return y(d.y1);
-})
-    .attr("height", function (d) {
-    return y(d.y0) - y(d.y1);
-})
-    .style("fill", function (d) {
-    return color(d.name);
-})
+        .enter().append("rect")
+        .attr("class", "bar")
+        .attr("width", function(d) {
+         return x.rangeBand();   
+        })
+        .attr("y", function (d) {
+        return y(d.y1);
+    })
+        .attr("height", function (d) {
+        return y(d.y0) - y(d.y1);
+    })
+        .style("fill", function (d) {
+        return color(d.name);
+    })
+}
 
+// Bar graph animation
+function intro(d) {
+  d.hide()
+  var original = d.attr('y');
+  d.attr('y', height + 100)
+  var t = 100;
+  d.transition()
+     .delay(t + (count*10))
+     .duration(t * 5)
+     .attr('y', original)
+  d.show();
+}
+
+var bar = makeBars();
+var count = 0;
+bar.each(function(d) {
+    intro(d3.select(this))
+    count++;
+});
+
+
+// Bar Graph Legend
 var legend = svg.selectAll(".legend")
     .data(color.domain().slice().reverse())
     .enter().append("g")
