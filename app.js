@@ -1,6 +1,6 @@
 // Grab data from data.js file
-var rideData = data.rideData.data;
-var length = rideData.length;
+var data = data.rideData.data;
+var length = 0;
 
 // Show a hidden d3 element.
 d3.selection.prototype.show = function() {
@@ -14,108 +14,141 @@ d3.selection.prototype.hide = function() {
   return this;
 }
 
-// Add an svg image to <body>
-//   and return its d3 object.
-function svgMaker(w, h) {
-  return d3.select('body')
-             .append('svg')
-             .attr('width', w)
-             .attr('height', h);
+function intro(d) {
+  d.hide()
+  var original = d.attr('y');
+  d.attr('y', h)
+  var t = 150;
+  d.transition()
+     .delay(t)
+     .duration(t * (count / 2))
+     .attr('y', original)
+  d.show();
 }
 
-// Add text to a d3 object
-//   and return the d3 object for the text.
-function textMaker(dataset) {
-  return this.selectAll('text')
-             .data(dataset)
-             .enter()
-             .append('text')
-}
+// Set our margins
+var margin = {
+    top: 20,
+    right: 20,
+    bottom: 30,
+    left: 60
+},
+width = 1000 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
 
-// Create Bar Graph
-function barGraph() {
-  var w = 1000;
-  var h = 500;;
-  var padding = 10;
+// Our X scale
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
 
-  var svg = svgMaker(w, h)
+// Our Y scale
+var y = d3.scale.linear()
+    .rangeRound([height, 0]);
 
-  function intro(d) {
-      d.hide()
-      var original = d.attr('y');
-      d.attr('y', h)
-      var t = 150;
-      d.transition()
-         .delay(t)
-         .duration(t * (count / 2))
-         .attr('y', original)
-      d.show();
-    }
+// Our color bands
+var color = d3.scale.ordinal()
+    .range(["#1a1a1a", "#474747", "#EA0B8C", "#a30762"]);
 
-  function makeBars() {
-    return svg.selectAll('rect')
-        .data(rideData)
-        .enter()
-        .append('rect')
-        .attr('class', 'bar')
-        .attr('x', function(d, i) {
-          return i * ((w - 40) / rideData.length) + 20;
-        })
-        .attr('y', function(d) {
-          return h - (d[1]*30) //Height minus data value
-        })
-        .attr('width', (w / rideData.length - padding))
-        .attr('height', function(d) {
-          return (h) - d3.select(this).attr('y') //Data value
-        })
-        .attr('fill', function(d) {
-          var b = Math.round(d[1])+120;
-          var color = 'rgb(76, 175, ' + b + ')';
-          return color;
-        });
-    }
+// Use our X scale to set a bottom axis
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
 
-  function makeBarLabels() {
-    return textMaker.call(svg, rideData)
-      .text(function(d) {
-        var barText = Math.round(d[1]) + ' rides';
-        return barText;
-      })
+// Same for our left axis
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
 
-      .attr('x', function(d, i) {
-        return i * ((w - 40) / rideData.length) + 23;
-        //return i * (w / usPopDataData.length) + 8;
-      })
-      .attr('y', function(d, i) {
-        return h - (d[1]*30+10);
-      })
-      .attr('fill', 'black')
-      .attr('font-size', '12px')
-      .attr('style', 'opacity:0')
-  }
+// Add our chart to the #chart div
+var svg = d3.select(".graph").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-  var bars = makeBars();
-  var count = 0;
-  bars.each(function(d) {
-    intro(d3.select(this))
-    count++;
-  });
+// Map our columns to our colors
+color.domain(d3.keys(data[0]).filter(function (key) {
+    return key !== "Date";
+}));
 
-  var barLabels = makeBarLabels()
-  delay = (rideData.length/2*150)-500
-  barLabels.transition()
-       .delay(delay)
-       .duration(2000)
-       .style({
-         'opacity': '1'
-       });
-  delay += 2000;
+data.forEach(function (d) {
+    var y0 = 0;
+    d.types = color.domain().map(function (name) {
+        return {
+            name: name,
+            y0: y0,
+            y1: y0 += +d[name]
+        };
+    });
+    d.total = d.types[d.types.length - 1].y1;
+});
 
-}
+// Our X domain is our set of years
+x.domain(data.map(function (d) {
+    return d.Date;
+}));
+
+// Our Y domain is from zero to our highest total
+y.domain([0, d3.max(data, function (d) {
+    return d.total;
+})]);
+
+svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
 
 
-barGraph();
+var month = svg.selectAll(".Date")
+    .data(data)
+    .enter().append("g")
+    .attr("class", "g")
+    .attr("transform", function (d) {
+    return "translate(" + x(d.Date) + ",0)";
+});
 
+month.selectAll("rect")
+    .data(function (d) {
+    return d.types;
+})
+    .enter().append("rect")
+    .attr("class", "bar")
+    .attr("width", function(d) {
+     return x.rangeBand();   
+    })
+    .attr("y", function (d) {
+    return y(d.y1);
+})
+    .attr("height", function (d) {
+    return y(d.y0) - y(d.y1);
+})
+    .style("fill", function (d) {
+    return color(d.name);
+})
 
+var legend = svg.selectAll(".legend")
+    .data(color.domain().slice().reverse())
+    .enter().append("g")
+    .attr("class", "legend")
+    .attr("transform", function (d, i) {
+    return "translate(0," + i * 20 + ")";
+});
 
+legend.append("rect")
+    .attr("x", width - (width - 118))
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", color);
+
+legend.append("text")
+    .attr("x", width - (width - 100))
+    .attr("y", 9)
+    .attr("dy", ".35em")
+    .style("text-anchor", "end")
+    .text(function (d) {
+    return d;
+});

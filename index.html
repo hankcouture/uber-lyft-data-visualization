@@ -4,19 +4,37 @@
     <style type="text/css">
       body {
         font-family: Helvetica;
+        background-color: #f4f4f4;
+        text-align: center;
+      }
+
+      h1 {
+        margin: 15px 0px 5px;
+      }
+
+      h3 {
+        margin: 10px 0px;
+        font-weight: 400;
+      }
+
+      .graph {
+        background-color: #fff;
+        width: 1000px;
+        margin: 0px auto;
+        border: 1px solid #e8e8e8;
+        border-radius: 5px;
       }
 
       .bar:hover {
-        /*fill: #2d6930;*/
-        opacity: 0.87;
+        opacity: 0.6;
         cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <div class="graph">
-
-    </div>
+    <h1>Uber vs. Lyft Ride Data</h1>
+    <h3># of Rides</h3>
+    <div class="graph"></div>
     <script src="d3.js" charset="utf-8"></script>
     <script src='data.js'></script>
     <script src='app.js'></script>

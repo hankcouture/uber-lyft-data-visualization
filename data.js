@@ -1,27 +1,141 @@
 var data = {
 	rideData:{
 		description: 'Uber vs. Lyft Ride Data',
-		column_names:["Month","Total", "UberX", "Uber Pool", "Lyft", "Lyft Line"],
+		column_names:["Month", "UberX", "Uber Pool", "Lyft", "Lyft Line"],
 		data:[
-			["2014-05-31",1,1,0,0,0],
-			["2014-06-31",0,0,0,0,0],
-			["2014-07-31",4,4,0,0,0],
-			["2014-08-31",3,3,0,0,0],
-			["2014-09-31",2,2,0,0,0],
-			["2014-10-31",1,1,0,0,0],
-			["2014-11-31",1,1,0,0,0],
-			["2014-12-31",0,0,0,0,0],
-			["2015-01-31",4,1,2,1,0],
-			["2015-02-31",4,3,0,1,0],
-			["2015-03-31",3,3,0,0,0],
-			["2015-04-31",1,1,0,0,0],
-			["2015-05-31",3,2,1,0,0],
-			["2015-06-31",3,3,0,0,0],
-			["2015-07-31",4,3,1,0,0],
-			["2015-08-31",4,4,0,0,0],
-			["2015-09-31",8,0,0,8,0],
-			["2015-10-31",14,2,1,9,2],
-			["2015-11-31",7,4,0,1,2]
+			{
+				'Date': 1,
+				'UberX': 1,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 2,
+				'UberX': 0,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 3,
+				'UberX': 4,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 4,
+				'UberX': 3,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 5,
+				'UberX': 2,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 6,
+				'UberX': 1,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 7,
+				'UberX': 1,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 8,
+				'UberX': 0,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 9,
+				'UberX': 1,
+				'Uber Pool': 2,
+				'Lyft': 1,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 10,
+				'UberX': 3,
+				'Uber Pool': 0,
+				'Lyft': 1,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 11,
+				'UberX': 3,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 12,
+				'UberX': 1,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 13,
+				'UberX': 2,
+				'Uber Pool': 1,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 14,
+				'UberX': 3,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 15,
+				'UberX': 3,
+				'Uber Pool': 1,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 16,
+				'UberX': 4,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 17,
+				'UberX': 0,
+				'Uber Pool': 0,
+				'Lyft': 8,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 18,
+				'UberX': 2,
+				'Uber Pool': 1,
+				'Lyft': 9,
+				'Lyft Line': 2
+			},
+			{
+				'Date': 19,
+				'UberX': 4,
+				'Uber Pool': 0,
+				'Lyft': 1,
+				'Lyft Line': 2
+			}
 		],
 	}
 }
