@@ -15,7 +15,7 @@ d3.selection.prototype.hide = function() {
 // Grab data from data.js file
 // var data = data.rideData.numberOfRides;
 
-function makeBarChart(data) {
+function makeBarChart(className, data) {
 
     // Set our margins
     var margin = {
@@ -53,6 +53,7 @@ function makeBarChart(data) {
     var svg = d3.select(".graph").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
+        .attr("class", className)
         .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -171,16 +172,32 @@ function makeBarChart(data) {
         .text(function (d) {
         return d;
     });
-  
 }
 
-$('.numberOfRides').on('click', function(){
-  $('.graph').empty();
-  makeBarChart(data.rideData.numberOfRides);
+
+
+// jQuery Tab Display
+var clicked = false;
+
+$('.numberOfRidesButton').on('click', function(){
+  $('.rideCost').hide();
+  $('.numberOfRides').show();
 })
 
-$('.rideCost').on('click', function(){
-  $('.graph').empty();
-  makeBarChart(data.rideData.rideCost);
+$('.rideCostButton').on('click', function(){
+  if (!clicked) {
+    $('.numberOfRides').hide();
+    makeBarChart('rideCost', data.rideData.rideCost);
+    clicked = true;
+  } else {
+    $('.numberOfRides').hide();
+    $('.rideCost').show();
+  }
 })
+
+
+$(document).ready(function() {
+  makeBarChart('numberOfRides', data.rideData.numberOfRides);
+  $('.numberOfRidesButton').focus();
+});
 

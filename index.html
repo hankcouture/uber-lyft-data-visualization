@@ -20,11 +20,16 @@
         font-weight: 700;
         border: none;
         border-bottom: 1px solid #e8e8e8;
+        background-color: #f4f4f4;
+      }
+
+      .filterBar button:focus {
+        outline: none;
         background-color: #fff;
       }
 
-      .selected {
-        background-color: #f4f4f4;
+      .filterBar button:active {
+        background-color: #fff;
       }
 
       .display {
@@ -45,8 +50,8 @@
     <h1>Uber vs. Lyft Ride Data</h1>
     <div class="display">
       <div class="filterBar">
-        <button class="numberOfRides">Number of Rides</button>
-        <button class="rideCost">Cost of Rides</button>
+        <button class="numberOfRidesButton">Number of Rides</button>
+        <button class="rideCostButton">Cost of Rides</button>
       </div>
       <div class="graph"></div>
     </div>
