@@ -272,5 +272,140 @@ var data = {
 				'Lyft Line': 19.82
 			}
 		],
+		rideMileage:[
+			{
+				'Date': 1,
+				'UberX': 4.01,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 2,
+				'UberX': 0,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 3,
+				'UberX': 8.40,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 4,
+				'UberX': 15.58,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 5,
+				'UberX': 11.64,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 6,
+				'UberX': 3.83,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 7,
+				'UberX': 17.93,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 8,
+				'UberX': 0,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 9,
+				'UberX': 3.59,
+				'Uber Pool': 23.01,
+				'Lyft': 5.40,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 10,
+				'UberX': 34.05,
+				'Uber Pool': 0,
+				'Lyft': 18.00,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 11,
+				'UberX': 15.01,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 12,
+				'UberX': 10.69,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 13,
+				'UberX': 22.32,
+				'Uber Pool': 21.62,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 14,
+				'UberX': 16.57,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 15,
+				'UberX': 6.56,
+				'Uber Pool': 2.16,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 16,
+				'UberX': 7.64,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 17,
+				'UberX': 0,
+				'Uber Pool': 0,
+				'Lyft': 28.20,
+				'Lyft Line': 0
+			},
+			{
+				'Date': 18,
+				'UberX': 4.33,
+				'Uber Pool': 20.39,
+				'Lyft': 21.40,
+				'Lyft Line': 7.90
+			},
+			{
+				'Date': 19,
+				'UberX': 27.66,
+				'Uber Pool': 0,
+				'Lyft': 7.40,
+				'Lyft Line': 10.40
+			}
+		],
 	}
 }

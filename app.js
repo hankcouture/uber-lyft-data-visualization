@@ -177,21 +177,38 @@ function makeBarChart(className, data) {
 
 
 // jQuery Tab Display
-var clicked = false;
+var rideCostClicked = false;
+var rideMileageClicked = false;
 
 $('.numberOfRidesButton').on('click', function(){
   $('.rideCost').hide();
+  $('.rideMileage').hide();
   $('.numberOfRides').show();
 })
 
 $('.rideCostButton').on('click', function(){
-  if (!clicked) {
+  if (!rideCostClicked) {
     $('.numberOfRides').hide();
+    $('.rideMileage').hide();
     makeBarChart('rideCost', data.rideData.rideCost);
-    clicked = true;
+    rideCostClicked = true;
   } else {
     $('.numberOfRides').hide();
+    $('.rideMileage').hide();
     $('.rideCost').show();
+  }
+})
+
+$('.rideMileageButton').on('click', function(){
+  if (!rideMileageClicked) {
+    $('.numberOfRides').hide();
+    $('.rideCost').hide();
+    makeBarChart('rideMileage', data.rideData.rideMileage);
+    rideMileageClicked = true;
+  } else {
+    $('.numberOfRides').hide();
+    $('.rideCost').hide();
+    $('.rideMileage').show();
   }
 })
 
