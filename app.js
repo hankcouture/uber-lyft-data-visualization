@@ -180,13 +180,14 @@ function makeBarChart(className, data) {
 var rideCostClicked = false;
 var rideMileageClicked = false;
 
-$('.numberOfRidesButton').on('click', function(){
+$('.numberOfRidesTab').on('click', function(){
   $('.rideCost').hide();
   $('.rideMileage').hide();
   $('.numberOfRides').show();
 })
 
-$('.rideCostButton').on('click', function(){
+$('.rideCostTab').on('click', function(){
+    console.log('hi');
   if (!rideCostClicked) {
     $('.numberOfRides').hide();
     $('.rideMileage').hide();
@@ -199,7 +200,7 @@ $('.rideCostButton').on('click', function(){
   }
 })
 
-$('.rideMileageButton').on('click', function(){
+$('.rideMileageTab').on('click', function(){
   if (!rideMileageClicked) {
     $('.numberOfRides').hide();
     $('.rideCost').hide();
