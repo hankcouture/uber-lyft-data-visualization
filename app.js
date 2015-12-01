@@ -21,7 +21,7 @@ function makeBarChart(className, data) {
     var margin = {
         top: 20,
         right: 20,
-        bottom: 30,
+        bottom: 70,
         left: 60
     },
     width = 1000 - margin.left - margin.right,
@@ -88,11 +88,23 @@ function makeBarChart(className, data) {
     svg.append("g")
         .attr("class", "x axis")
         .attr("transform", "translate(0," + height + ")")
-        .call(xAxis);
+        .call(xAxis)
+        .selectAll("text")  
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr("transform", "rotate(-65)" )
 
     svg.append("g")
         .attr("class", "y axis")
-        .call(yAxis);
+        .call(yAxis)
+        // .append("text")
+        //     .attr("class", "y label")
+        //     .attr("text-anchor", "end")
+        //     .attr("y", -50)
+        //     .attr("dy", ".75em")
+        //     .attr("transform", "rotate(-90)")
+        //     .text("Y-Axis Label");
 
 
     var month = svg.selectAll(".Date")
@@ -122,10 +134,6 @@ function makeBarChart(className, data) {
             .style("fill", function (d) {
             return color(d.name);
         })
-            // .text(function(d) {
-            //     console.log(d)
-            //     return d.y1-d.y0;
-            // })
     }
 
 

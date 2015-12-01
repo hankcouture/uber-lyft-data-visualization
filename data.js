@@ -4,133 +4,133 @@ var data = {
 		column_names:["Month", "UberX", "Uber Pool", "Lyft", "Lyft Line"],
 		numberOfRides:[
 			{
-				'Date': 1,
+				'Date': 'May 14',
 				'UberX': 1,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 2,
+				'Date': 'Jun 14',
 				'UberX': 0,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 3,
+				'Date': 'Jul 14',
 				'UberX': 4,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 4,
+				'Date': 'Aug 14',
 				'UberX': 3,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 5,
+				'Date': 'Sep 14',
 				'UberX': 2,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 6,
+				'Date': 'Oct 14',
 				'UberX': 1,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 7,
+				'Date': 'Nov 14',
 				'UberX': 1,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 8,
+				'Date': 'Dec 14',
 				'UberX': 0,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 9,
+				'Date': 'Jan 15',
 				'UberX': 1,
 				'Uber Pool': 2,
 				'Lyft': 1,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 10,
+				'Date': 'Feb 15',
 				'UberX': 3,
 				'Uber Pool': 0,
 				'Lyft': 1,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 11,
+				'Date': 'Mar 15',
 				'UberX': 3,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 12,
+				'Date': 'Apr 15',
 				'UberX': 1,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 13,
+				'Date': 'May 15',
 				'UberX': 2,
 				'Uber Pool': 1,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 14,
+				'Date': 'Jun 15',
 				'UberX': 3,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 15,
+				'Date': 'Jul 15',
 				'UberX': 3,
 				'Uber Pool': 1,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 16,
+				'Date': 'Aug 15',
 				'UberX': 4,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 17,
+				'Date': 'Sep 15',
 				'UberX': 0,
 				'Uber Pool': 0,
 				'Lyft': 8,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 18,
+				'Date': 'Oct 15',
 				'UberX': 2,
 				'Uber Pool': 1,
 				'Lyft': 9,
 				'Lyft Line': 2
 			},
 			{
-				'Date': 19,
+				'Date': 'Nov 15',
 				'UberX': 4,
 				'Uber Pool': 0,
 				'Lyft': 1,
@@ -139,133 +139,133 @@ var data = {
 		],
 		rideCost:[
 			{
-				'Date': 1,
+				'Date': 'May 14',
 				'UberX': 17.25,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 2,
+				'Date': 'Jun 14',
 				'UberX': 0,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 3,
+				'Date': 'Jul 14',
 				'UberX': 48.07,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 4,
+				'Date': 'Aug 14',
 				'UberX': 72.88,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 5,
+				'Date': 'Sep 14',
 				'UberX': 46.05,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 6,
+				'Date': 'Oct 14',
 				'UberX': 10.93,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 7,
+				'Date': 'Nov 14',
 				'UberX': 60.00,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 8,
+				'Date': 'Dec 14',
 				'UberX': 0,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 9,
+				'Date': 'Jan 15',
 				'UberX': 18.25,
 				'Uber Pool': 73.04,
 				'Lyft': 16.43,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 10,
+				'Date': 'Feb 15',
 				'UberX': 119.88,
 				'Uber Pool': 0,
 				'Lyft': 2.66,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 11,
+				'Date': 'Mar 15',
 				'UberX': 61.47,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 12,
+				'Date': 'Apr 15',
 				'UberX': 50.35,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 13,
+				'Date': 'May 15',
 				'UberX': 70.25,
 				'Uber Pool': 43.80,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 14,
+				'Date': 'Jun 15',
 				'UberX': 65.56,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 15,
+				'Date': 'Jul 15',
 				'UberX': 46.44,
 				'Uber Pool': 11.86,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 16,
+				'Date': 'Aug 15',
 				'UberX': 27.27,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 17,
+				'Date': 'Sep 15',
 				'UberX': 0,
 				'Uber Pool': 0,
 				'Lyft': 51.03,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 18,
+				'Date': 'Oct 15',
 				'UberX': 13.40,
 				'Uber Pool': 23.87,
 				'Lyft': 70.39,
 				'Lyft Line': 2.00
 			},
 			{
-				'Date': 19,
+				'Date': 'Nov 15',
 				'UberX': 54.49,
 				'Uber Pool': 0,
 				'Lyft': 10.02,
@@ -274,133 +274,133 @@ var data = {
 		],
 		rideMileage:[
 			{
-				'Date': 1,
+				'Date': 'May 14',
 				'UberX': 4.01,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 2,
+				'Date': 'Jun 14',
 				'UberX': 0,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 3,
+				'Date': 'Jul 14',
 				'UberX': 8.40,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 4,
+				'Date': 'Aug 14',
 				'UberX': 15.58,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 5,
+				'Date': 'Sep 14',
 				'UberX': 11.64,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 6,
+				'Date': 'Oct 14',
 				'UberX': 3.83,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 7,
+				'Date': 'Nov 14',
 				'UberX': 17.93,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 8,
+				'Date': 'Dec 14',
 				'UberX': 0,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 9,
+				'Date': 'Jan 15',
 				'UberX': 3.59,
 				'Uber Pool': 23.01,
 				'Lyft': 5.40,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 10,
+				'Date': 'Feb 15',
 				'UberX': 34.05,
 				'Uber Pool': 0,
 				'Lyft': 18.00,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 11,
+				'Date': 'Mar 15',
 				'UberX': 15.01,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 12,
+				'Date': 'Apr 15',
 				'UberX': 10.69,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 13,
+				'Date': 'May 15',
 				'UberX': 22.32,
 				'Uber Pool': 21.62,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 14,
+				'Date': 'Jun 15',
 				'UberX': 16.57,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 15,
+				'Date': 'Jul 15',
 				'UberX': 6.56,
 				'Uber Pool': 2.16,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 16,
+				'Date': 'Aug 15',
 				'UberX': 7.64,
 				'Uber Pool': 0,
 				'Lyft': 0,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 17,
+				'Date': 'Sep 15',
 				'UberX': 0,
 				'Uber Pool': 0,
 				'Lyft': 28.20,
 				'Lyft Line': 0
 			},
 			{
-				'Date': 18,
+				'Date': 'Oct 15',
 				'UberX': 4.33,
 				'Uber Pool': 20.39,
 				'Lyft': 21.40,
 				'Lyft Line': 7.90
 			},
 			{
-				'Date': 19,
+				'Date': 'Nov 15',
 				'UberX': 27.66,
 				'Uber Pool': 0,
 				'Lyft': 7.40,
