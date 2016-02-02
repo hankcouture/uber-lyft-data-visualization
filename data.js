@@ -142,6 +142,13 @@ var data = {
 				'Uber Pool': 0,
 				'Lyft': 2,
 				'Lyft Line': 0
+			},
+			{
+				'Date': 'Jan 16',
+				'UberX': 0,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 2
 			}
 		],
 		rideCost:[
@@ -284,6 +291,13 @@ var data = {
 				'Uber Pool': 0,
 				'Lyft': 49.89,
 				'Lyft Line': 0
+			},
+			{
+				'Date': 'Jan 16',
+				'UberX': 0,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 19.48
 			}
 		],
 		rideMileage:[
@@ -426,6 +440,13 @@ var data = {
 				'Uber Pool': 0,
 				'Lyft': 20.40,
 				'Lyft Line': 0
+			},
+			{
+				'Date': 'Jan 16',
+				'UberX': 0,
+				'Uber Pool': 0,
+				'Lyft': 0,
+				'Lyft Line': 7.8
 			}
 		],
 	}

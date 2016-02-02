@@ -10,8 +10,6 @@ d3.selection.prototype.hide = function() {
   return this;
 }
 
-
-
 // Grab data from data.js file
 // var data = data.rideData.numberOfRides;
 
